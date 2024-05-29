@@ -44,7 +44,7 @@ namespace Ovning_3
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Förnamn är obligatoriskt.");
                 if (value.Length < 2 || value.Length > 10)
-                    throw new ArgumentException("Förnamn måste vara mellan 2 och 10 tecken.");
+                    throw new ArgumentException("Förnamn skall vara mellan 2 och 10 tecken.");
                 fName = value;
             }
         }
@@ -57,20 +57,32 @@ namespace Ovning_3
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("Efternamn är obligatoriskt.");
                 if (value.Length < 3 || value.Length > 15)
-                    throw new ArgumentException("Efternamn måste vara mellan 3 och 15 tecken.");
+                    throw new ArgumentException("Efternamn skall vara mellan 3 och 15 tecken.");
             }
         }
 
         public double Height
         {
             get { return height; }
-            set { }
+            set 
+            {
+                // Jag vill validera att height är inom rimliga gränser, t.ex. mellan 50 och 250 cm
+                if (value < 50 || value > 250)
+                    throw new ArgumentException("Längden skall vara mellan 50 och 250 cm.");
+                height = value;
+            }
         }
 
         public double Weight
         {
             get { return weight; }
-            set { }
+            set 
+            {
+                // Jag vill validera att weight är större än 0 och inom rimliga gränser, t.ex. max 300 kg
+                if (value <= 0 || value > 400)
+                    throw new ArgumentException("Vikten måste vara större än 0 och mindre än 400 kg.");
+                weight = value;
+            }
         }
 
     }
