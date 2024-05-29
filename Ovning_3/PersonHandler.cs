@@ -17,7 +17,25 @@ namespace Ovning_3
                 Console.WriteLine($"Ett fel inträffade: {error}");
             }
         }
-      
+
+        public Person CreatePerson(int age, string fName, string lName, double height, double weight) 
+        {
+            try 
+            {
+                Person person2 = new Person(age, fName, lName, height, weight);
+                return person2;
+            }
+            catch(ArgumentException invalidInstance) 
+            {
+                string error = invalidInstance.Message;
+                Console.WriteLine($"Ett fel inträffade: {error}");
+                return null;
+            }
+
+
+        }
+
+
 
     }
 }
