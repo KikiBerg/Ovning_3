@@ -8,9 +8,9 @@ namespace Ovning_3
 {
     public class PersonHandler
     {
-        public void SetAge (Person pers, int age) 
+        public void SetAge (Person person, int age) 
         { 
-            try { pers.Age = age; } 
+            try { person.Age = age; } 
             catch (ArgumentException invalidInstance)
             {
                 string error = invalidInstance.Message;
@@ -31,10 +31,47 @@ namespace Ovning_3
                 Console.WriteLine($"Ett fel inträffade: {error}");
                 return null;
             }
-
-
         }
 
+        public void SetFName(Person person, string fName)
+        {
+            try { person.FName = fName; }
+            catch (ArgumentException invalidInstance)
+            {
+                string error = invalidInstance.Message;
+                Console.WriteLine($"Ett fel inträffade: {error}");
+            }
+        }
+
+        public void SetLName(Person person, string lName)
+        {
+            try { person.LName = lName; }
+            catch (ArgumentException invalidInstance)
+            {
+                string error = invalidInstance.Message;
+                Console.WriteLine($"Ett fel inträffade: {error}");
+            }
+        }
+
+        public void SetHeight(Person person, double height)
+        {
+            try { person.Height = height; }
+            catch (ArgumentException invalidInstance)
+            {
+                string error = invalidInstance.Message;
+                Console.WriteLine($"Ett fel inträffade: {error}");
+            }
+        }
+
+        public void SetWeight(Person person, double weight)
+        {
+            try { person.Weight = weight; }
+            catch (ArgumentException invalidInstance)
+            {
+                string error = invalidInstance.Message;
+                Console.WriteLine($"Ett fel inträffade: {error}");
+            }
+        }
 
 
     }
