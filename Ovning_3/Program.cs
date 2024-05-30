@@ -5,20 +5,36 @@
         static void Main(string[] args)
         {
 
-            // Task1();
+            //Task1();
             Task2();
+            //Task3();
+
+        }
+
+        private static void Task3() 
+        { 
 
         }
 
         private static void Task2() 
-        { 
+        {
+            List<UserError> errors = new List<UserError>
+            {
+                new NumericInputError(), 
+                new TextInputError()
+            };
 
+            foreach (var error in errors) 
+            {
+                Console.WriteLine(error.UEMessage());
+            }
         }
+
         private static void Task1()
         {
             /* Iom att hanteringen av ArgumentException flyttades 
              * till metoderna i PersonHandler
-             * så använder jag if-satser istället för att 
+             * så använder jag if-satser istället, för att 
              * kontrollera om CreatePerson metoden returnerar 
              * en giltig Person-instans.
              */
