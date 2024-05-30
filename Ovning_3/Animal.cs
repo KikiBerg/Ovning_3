@@ -23,3 +23,11 @@ namespace Ovning_3
         }
     }
 }
+
+
+/* Kunskapsfrågor
+ * F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt attribut, i vilken klass bör vi lägga det?
+ * Svar: Vi bör lägga det nya attributet i Bird-klassen för att det är därifrån alla fåglar ärver.
+ * F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
+ * Svar: Vi bör lägga det nya attributet i Animal-klassen för att samtliga djur ärver ifrån Animal.
+ */
