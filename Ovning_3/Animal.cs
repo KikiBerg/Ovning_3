@@ -8,6 +8,7 @@ namespace Ovning_3
 {
     public abstract class Animal
     {
+        //Egenskaper som alla djur bör ha
         public string Name { get; set; }
         public double Weight { get; set; }
         public int Age { get; set; }
