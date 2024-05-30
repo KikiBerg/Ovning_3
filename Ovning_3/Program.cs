@@ -24,8 +24,20 @@
                 new TextInputError()
             };
 
+            // Skriver ut samtliga UserErrors UEMessage() genom en foreach loop
             foreach (var error in errors) 
             {
+                Console.WriteLine(error.UEMessage());
+            }
+
+            // Skapa tre egna klasser med tre egna definitioner på UEMessage()
+            errors.Add(new CustomError1());
+            errors.Add(new CustomError2());
+            errors.Add(new CustomError3());
+
+            // Skriver ut meddelandena från de nya klasserna
+            foreach (var error in errors) 
+            { 
                 Console.WriteLine(error.UEMessage());
             }
         }

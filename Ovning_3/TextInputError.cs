@@ -10,7 +10,7 @@ namespace Ovning_3
     {
         public override string UEMessage()
         {
-            return "You tried to use a text input in a numeric only ﬁeld. This ﬁred an error!";
+            return "You tried to use a text input in a numeric only field. This fired an error!";
         }
     }
 }
