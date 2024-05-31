@@ -15,12 +15,25 @@ namespace Ovning_3
 
         public abstract void DoSound(); // metod
 
+        public virtual string Stats() // Metoden Stats() som kan överridas i subklasserna
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Name: {Name}");
+            sb.AppendLine($"Weight: {Weight}");
+            sb.AppendLine($"Age: {Age}");
+            
+            return sb.ToString();
+        }
+
+
         public Animal(string name, double weight, int age) // konstruktor
         {
             Name = name;
             Weight = weight;
             Age = age;
         }
+
+
     }
 }
 
