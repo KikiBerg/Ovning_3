@@ -14,6 +14,27 @@
         private static void Task3() 
         { 
             List<Animal> animals = new List<Animal>();
+
+            animals.Add(new Horse ("Thunder", 500, 5, 60));
+            animals.Add(new Dog("Rex", 30, 3, true));
+            animals.Add(new Hedgehog("Spike", 1, 2, 5000));
+            animals.Add(new Worm("Wormie", 0.1, 1, false));
+            animals.Add(new Bird("Tweety", 0.5, 1, 0.5));
+            animals.Add(new Wolf("Alpha", 70, 4, "Alpha"));
+
+            foreach (Animal animal in animals) 
+            { 
+                Console.WriteLine($"Animal: {animal.GetType().Name}");
+                animal.DoSound();
+
+                if (animal is IPerson person) 
+                { 
+                    person.Talk();
+                }
+            }
+
+           
+
         }
 
         private static void Task2() 
