@@ -70,6 +70,14 @@
                 }
             }
 
+            foreach (Animal animal in animals)
+            {
+                if (animal is Dog dog) // kontrollerar om animal-objektet är en instans av Dog-klassen
+                {
+                    Console.WriteLine(dog.GetDogInfo());
+                }
+            }
+
 
         }
 
