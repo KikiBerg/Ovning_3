@@ -44,3 +44,4 @@ namespace Ovning_3
  * F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
  * Svar: Vi bör lägga det nya attributet i Animal-klassen för att samtliga djur ärver ifrån Animal.
  */
+

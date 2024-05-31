@@ -7,14 +7,14 @@
 
             //Task1();
             //Task2();
-            //Task3();
+            Task3();
 
         }
 
         private static void Task3() 
         { 
             List<Animal> animals = new List<Animal>();
-
+            
             animals.Add(new Horse ("Thunder", 500, 5, 60));
             animals.Add(new Dog("Rex", 30, 3, true));
             animals.Add(new Hedgehog("Spike", 1, 2, 5000));
@@ -30,10 +30,46 @@
                 if (animal is IPerson person) 
                 { 
                     person.Talk();
+                }                
+            }
+            
+            // Försöker lägga till en häst i hundlistan
+            //List<Dog> dogs = new List<Dog>();
+            
+            //Horse horse = new Horse("Thunder", 500, 5, 60);
+            //dogs.Add(horse);
+            /*
+             * F: Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
+             * Svar: Det går inte att lägga till en häst i en lista av hundar eftersom en häst inte är en hund.
+             * Listan är typspecifik och kan endast innehålla objekt av typen Dog eller dess subklasser.
+             * 
+             * F: Vilken typ måste listan vara för att alla klasser skall kunna lagras tillsammans?
+             * Svar: För att alla djurklasser ska kunna lagras tillsammans i en lista, måste listan vara av typen List<Animal>.
+             * Eftersom alla djurklasser ärver från Animal, kan en List<Animal> innehålla objekt av alla djurklasser.
+             * 
+             */
+
+            foreach (Animal animal in animals)
+            {
+                Console.WriteLine(animal.Stats());
+            }
+
+            /* Kunskapsfrågor
+             * F: Skriv ut samtliga Animals Stats() genom en foreach loop.
+             * Testa och se så det fungerar.
+             * Förklara vad det är som händer.
+             * Svar: När vi skriver ut animal.Stats() i foreach-loopen, anropas den överridna versionen av Stats()-metoden
+             * för respektive djurklass. 
+             */
+
+            foreach (Animal animal in animals)
+            {
+                if (animal is Dog)
+                {
+                    Console.WriteLine(animal.Stats());
                 }
             }
 
-           
 
         }
 
