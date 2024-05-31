@@ -14,5 +14,12 @@ namespace Ovning_3
         {
             StandingLegCount = standingLegCount;
         }
+
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"Does the pelican stand on one or two legs? {StandingLegCount}");
+            return sb.ToString();
+        }
     }
 }

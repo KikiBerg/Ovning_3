@@ -14,5 +14,12 @@ namespace Ovning_3
         {
             GularPouchVolume = gularPouchVolume;
         }
+
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"The volume of gular pouch: {GularPouchVolume}");
+            return sb.ToString();
+        }
     }
 }

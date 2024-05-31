@@ -13,7 +13,7 @@
 
         private static void Task3() 
         { 
-
+            List<Animal> animals = new List<Animal>();
         }
 
         private static void Task2() 

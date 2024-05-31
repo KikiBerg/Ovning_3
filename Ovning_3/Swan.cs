@@ -14,5 +14,12 @@ namespace Ovning_3
         {
             IsAggressive = isAggressive;
         }
+
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"Is the swan is aggresive? {IsAggressive}");
+            return sb.ToString();
+        }
     }
 }
