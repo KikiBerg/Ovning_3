@@ -26,5 +26,17 @@ namespace Ovning_3
         {
             Console.WriteLine("Barking");
         }
+
+        public string GetDogInfo() 
+        {
+            return "I am a dog!";
+        }
+
+        /* Kunskapsfrågor
+         * F: Kommer du åt den metoden från Animals listan? Varför inte?
+         * Svar: Eftersom Animals-listan är av typen List<Animal>, har den endast åtkomst till medlemmar som finns
+         * i Animal-klassen eller dess basklasser. 
+         * Metoden GetDogInfo() finns endast i Dog-klassen och är därför inte tillgänglig från Animals-listan.
+         */
     }
 }
