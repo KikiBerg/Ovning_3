@@ -15,6 +15,12 @@ namespace Ovning_3
             WingSpan = wingSpan;
         }
 
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"WingSpan: {WingSpan}");
+            return sb.ToString();
+        }
         public override void DoSound()
         {
             Console.WriteLine("Whistle");

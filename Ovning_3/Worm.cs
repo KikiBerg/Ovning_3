@@ -15,6 +15,12 @@ namespace Ovning_3
             IsPoisonous = isPoisonous;
         }
 
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"IsPoisonous: {IsPoisonous}");
+            return sb.ToString();
+        }
         public override void DoSound()
         {
             Console.WriteLine("...");

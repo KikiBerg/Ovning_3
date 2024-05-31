@@ -15,6 +15,13 @@ namespace Ovning_3
             IsTrained = isTrained;
         }
 
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"Is the dog trained: {IsTrained}");
+            return sb.ToString();
+        }
+
         public override void DoSound()
         {
             Console.WriteLine("Barking");

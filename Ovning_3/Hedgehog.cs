@@ -15,6 +15,12 @@ namespace Ovning_3
             NrOfSpikes = nrOfSpikes;
         }
 
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"NrOfSpikes: {NrOfSpikes}");
+            return sb.ToString();
+        }
         public override void DoSound()
         {
             Console.WriteLine("Grunting");

@@ -15,6 +15,12 @@ namespace Ovning_3
             PackLeader = packLeader;
         }
 
+        public override string Stats() //override för Stats()
+        {
+            StringBuilder sb = new StringBuilder(base.Stats());
+            sb.AppendLine($"PackLeader: {PackLeader}");
+            return sb.ToString();
+        }
         public override void DoSound()
         {
             Console.WriteLine("Howling");
